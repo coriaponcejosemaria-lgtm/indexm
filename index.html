@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TECNO///SIV - Accesorios para Computadoras</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <h1 class="logo">TECNO///SIV</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#categorias">Categorías</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar productos..." onkeyup="filtrarProductos()">
+                <button>🔍</button>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Banner con partículas animadas -->
+    <section class="banner" id="inicio">
+        <canvas id="particlesCanvas"></canvas>
+        <div class="banner-content">
+            <h2>Encuentra los mejores accesorios para tu computadora</h2>
+            <p>Calidad garantizada y los mejores precios.</p>
+            <button class="shop-now">Comprar ahora</button>
+        </div>
+    </section>
+
+    <!-- Categorías -->
+    <section id="categorias" class="categorias">
+        <h2>Explora Categorías Populares</h2>
+        <div class="categorias-grid">
+            <div class="categoria" onclick="mostrarCatalogo('teclados')"><img src="img/teclados.jpg" alt="Teclados"><p>Teclados</p></div>
+            <div class="categoria" onclick="mostrarCatalogo('mouse')"><img src="img/mouse.jpg" alt="Mouse"><p>Mouse</p></div>
+            <div class="categoria" onclick="mostrarCatalogo('audifonos')"><img src="img/audifonos.jpg" alt="Audífonos"><p>Audífonos</p></div>
+            <div class="categoria" onclick="mostrarCatalogo('impresoras')"><img src="img/impresoras.jpg" alt="Impresoras"><p>Impresoras</p></div>
+        </div>
+    </section>
+    
+    <!-- Catálogo Teclados -->
+    <section id="teclados" class="catalogo" style="display: none;">
+        <h2>Catálogo de Teclados</h2>
+        <div class="productos-grid">
+            <div class="producto"><img src="img/teclado1.PNG" alt="Teclado 1"><p>Teclado multimedia - BS.210</p></div>
+            <div class="producto"><img src="img/teclado2.PNG" alt="Teclado 2"><p>Teclado mecánico RGB - BS.350</p></div>
+            <div class="producto"><img src="img/teclado3.PNG" alt="Teclado 3"><p>Teclado inalámbrico - BS.200</p></div>
+            <div class="producto"><img src="img/teclado4.PNG" alt="Teclado 4"><p>Teclado ergonómico - BS.400</p></div>
+            <div class="producto"><img src="img/teclado5.PNG" alt="Teclado 5"><p>Teclado gamer mecánico - BS.500</p></div>
+            <div class="producto"><img src="img/teclado6.PNG" alt="Teclado 6"><p>Teclado retroiluminado - BS.250</p></div>
+            <div class="producto"><img src="img/teclado7.PNG" alt="Teclado 7"><p>Teclado compacto - BS.180</p></div>
+            <div class="producto"><img src="img/teclado8.PNG" alt="Teclado 8"><p>Teclado inalámbrico de oficina - BS.220</p></div>
+        </div>
+    </section>
+    
+    <!-- Catálogo Mouse -->
+    <section id="mouse" class="catalogo" style="display: none;">
+        <h2>Catálogo de Mouse</h2>
+        <div class="productos-grid">
+            <div class="producto"><img src="img/mouse1.PNG" alt="Mouse 1"><p>Mouse láser - BS.140</p></div>
+            <div class="producto"><img src="img/mouse2.PNG" alt="Mouse 2"><p>Mouse inalámbrico - BS.180</p></div>
+            <div class="producto"><img src="img/mouse3.PNG" alt="Mouse 3"><p>Mouse gaming - BS.220</p></div>
+            <div class="producto"><img src="img/mouse4.PNG" alt="Mouse 4"><p>Mouse ergonómico - BS.160</p></div>
+            <div class="producto"><img src="img/mouse5.PNG" alt="Mouse 5"><p>Mouse óptico - BS.130</p></div>
+            <div class="producto"><img src="img/mouse6.PNG" alt="Mouse 6"><p>Mouse Bluetooth - BS.200</p></div>
+            <div class="producto"><img src="img/mouse7.PNG" alt="Mouse 7"><p>Mouse de oficina - BS.100</p></div>
+            <div class="producto"><img src="img/mouse8.PNG" alt="Mouse 8"><p>Mouse gamer con luces RGB - BS.250</p></div>
+        </div>
+    </section>
+    
+    <!-- Catálogo Audífonos -->
+    <section id="audifonos" class="catalogo" style="display: none;">
+        <h2>Catálogo de Audífonos</h2>
+        <div class="productos-grid">
+            <div class="producto"><img src="img/audifonos1.jpg" alt="Audífono 1"><p>Audífonos inalámbricos - BS.250</p></div>
+            <div class="producto"><img src="img/audifonos2.jpg" alt="Audífono 2"><p>Audífonos con cancelación de ruido - BS.300</p></div>
+            <div class="producto"><img src="img/audifonos3.jpg" alt="Audífono 3"><p>Audífonos gaming - BS.280</p></div>
+            <div class="producto"><img src="img/audifonos4.jpg" alt="Audífono 4"><p>Audífonos deportivos - BS.220</p></div>
+            <div class="producto"><img src="img/audifonos5.jpg" alt="Audífono 5"><p>Audífonos Bluetooth - BS.270</p></div>
+            <div class="producto"><img src="img/audifonos6.jpg" alt="Audífono 6"><p>Audífonos con micrófono - BS.260</p></div>
+            <div class="producto"><img src="img/audifonos7.jpg" alt="Audífono 7"><p>Audífonos de estudio - BS.350</p></div>
+            <div class="producto"><img src="img/audifonos8.jpg" alt="Audífono 8"><p>Audífonos con sonido envolvente - BS.400</p></div>
+        </div>
+    </section>
+    
+    <!-- Catálogo Impresoras -->
+    <section id="impresoras" class="catalogo" style="display: none;">
+        <h2>Catálogo de Impresoras</h2>
+        <div class="productos-grid">
+            <div class="producto"><img src="img/impresora1.jpg" alt="Impresora 1"><p>Impresora láser - BS.1500</p></div>
+            <div class="producto"><img src="img/impresora2.jpg" alt="Impresora 2"><p>Impresora multifuncional - BS.1800</p></div>
+            <div class="producto"><img src="img/impresora3.jpg" alt="Impresora 3"><p>Impresora inyección de tinta - BS.1200</p></div>
+            <div class="producto"><img src="img/impresora4.jpg" alt="Impresora 4"><p>Impresora térmica - BS.900</p></div>
+            <div class="producto"><img src="img/impresora5.jpg" alt="Impresora 5"><p>Impresora inalámbrica - BS.1600</p></div>
+            <div class="producto"><img src="img/impresora6.jpg" alt="Impresora 6"><p>Impresora de etiquetas - BS.1100</p></div>
+            <div class="producto"><img src="img/impresora7.jpg" alt="Impresora 7"><p>Impresora para fotografía - BS.2500</p></div>
+            <div class="producto"><img src="img/impresora8.jpg" alt="Impresora 8"><p>Impresora 3D - BS.3000</p></div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer id="contacto">
+        <p>&copy; TECNO///SIV </p>
+        <p>Contacto: coriaponcejosemaria@gmail.com | Tel: 73152240</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Mostrar u ocultar categorías
+        function mostrarCatalogo(categoria) {
+            document.querySelectorAll('.catalogo').forEach(cat => cat.style.display = 'none');
+            document.getElementById(categoria).style.display = 'block';
+        }
+
+        // Filtrar productos
+        function filtrarProductos() {
+            const query = document.querySelector('.search-bar input').value.toLowerCase();
+            const productos = document.querySelectorAll('.producto');
+            
+            productos.forEach(producto => {
+                const nombreProducto = producto.querySelector('p').textContent.toLowerCase();
+                producto.style.display = nombreProducto.includes(query) ? 'block' : 'none';
+            });
+        }
+
+        // Partículas de fondo en el banner
+        const canvas = document.getElementById("particlesCanvas");
+        const ctx = canvas.getContext("2d");
+
+        let particles = [];
+        const numParticles = 250;
+        let time = 0;
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            const section = document.getElementById("inicio");
+            canvas.height = section.offsetHeight;
+        }
+        resizeCanvas();
+        window.addEventListener("resize", resizeCanvas);
+
+        function createParticles() {
+            particles = [];
+            for (let i = 0; i < numParticles; i++) {
+                particles.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    radius: Math.random() * 3 + 3,
+                    xSpeed: (Math.random() - 0.5) * 1.5,
+                    ySpeed: (Math.random() - 0.5) * 1.5,
+                    angle: Math.random() * Math.PI * 2,
+                    pulse: Math.random() * 0.05 + 0.02
+                });
+            }
+        }
+
+        function drawParticles() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            particles.forEach(p => {
+                p.radius += Math.sin(time + p.angle) * p.pulse;
+                if (p.radius < 2) p.radius = 2;
+                if (p.radius > 6) p.radius = 6;
+
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+                ctx.fillStyle = "rgba(255,255,255,0.8)";
+                ctx.fill();
+            });
+
+            for (let i = 0; i < particles.length; i++) {
+                for (let j = i + 1; j < particles.length; j++) {
+                    let dx = particles[i].x - particles[j].x;
+                    let dy = particles[i].y - particles[j].y;
+                    let dist = Math.sqrt(dx * dx + dy * dy);
+
+                    if (dist < 140) {
+                        ctx.strokeStyle = `rgba(255,255,255,${0.3 * (1 - dist / 140)})`;
+                        ctx.lineWidth = 1.5;
+                        ctx.beginPath();
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                        ctx.stroke();
+                    }
+                }
+            }
+        }
+
+        function updateParticles() {
+            time += 0.01;
+            particles.forEach(p => {
+                p.x += p.xSpeed + Math.sin(time + p.angle) * 1;
+                p.y += p.ySpeed + Math.cos(time + p.angle) * 1;
+
+                if (p.x < 0 || p.x > canvas.width) p.xSpeed *= -1;
+                if (p.y < 0 || p.y > canvas.height) p.ySpeed *= -1;
+            });
+        }
+
+        function animate() {
+            drawParticles();
+            updateParticles();
+            requestAnimationFrame(animate);
+        }
+
+        createParticles();
+        animate();
+    </script>
+</body>
+</html>
